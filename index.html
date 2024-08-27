@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resource Hub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#categories-section">Categories</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to the Educational Resource Hub</h1>
+        <p>Your one-stop destination for educational resources.</p>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>This platform provides resources for various educational categories.</p>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured">
+        <h2>Featured Resources</h2>
+        <p>Check out our highlighted educational resources.</p>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories-section">
+        <h2>Categories</h2>
+        <div id="categories">
+            <h3>Category 1</h3>
+            <p>Resources for Category 1.</p>
+            <h3>Category 2</h3>
+            <p>Resources for Category 2.</p>
+        </div>
+    </section>
+
+    <!-- Sample Resources Section -->
+    <section id="resources">
+        <h2>Sample Resources</h2>
+        <p>Explore some sample resources available on this platform.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div id="mission">
+            <h3>Our Mission</h3>
+            <p>We aim to provide quality educational resources to everyone.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@educationalhub.com</p>
+        <p>Phone: +1234567890</p>
+    </section>
+
+    <!-- JavaScript for SPA Functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarLinks = document.querySelectorAll(".navbar a");
+
+            navbarLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
